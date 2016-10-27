@@ -12,11 +12,14 @@ namespace ModuleThree
         {
             GetStudentInformation();
             GetTeacherInformation();
+            GetUProgramInformation();
 
             Console.WriteLine("Press any key to close the console");
             Console.ReadKey();
         }
 
+
+        // Student Information
         static void GetStudentInformation()
         {
             Console.WriteLine("Enter the student's first name: ");
@@ -34,6 +37,8 @@ namespace ModuleThree
             Console.WriteLine("{0} {1} was born on: {2}", first, last, birthday);
         }
 
+
+        // Teacher Information
         static void GetTeacherInformation()
         {
             Console.WriteLine("Enter the teacher's first name: ");
@@ -50,5 +55,34 @@ namespace ModuleThree
         {
             Console.WriteLine("{0} {1} was born on: {2}", first, last, birthday);
         }
+
+        // UProgram Information
+        static void GetUProgramInformation()
+        {
+            Console.WriteLine("Enter the uprogram's name: ");
+            string programName = Console.ReadLine();
+            Console.WriteLine("Enter the uprogram's department head: ");
+            string departmentHead = Console.ReadLine();
+            Console.WriteLine("Enter the uprogram's degrees: ");
+            string degrees = Console.ReadLine();
+
+            // print uprogram details
+            PrintUProgramDetails(programName, departmentHead, degrees);
+        }
+
+        static void PrintUProgramDetails(string name, string department, string degrees)
+        {
+            Console.WriteLine("The program {0} in {1} department offers {2} degrees", name, department, degrees);
+        }
+
+        //Degree Information
+        //string degreeName;
+        //int creditsRequired;
+
+        //Course Information
+        //string courseName;
+        //int credits;
+        //int durationInWeeks;
+        //string teacher;
     }
 }
