@@ -13,6 +13,7 @@ namespace ModuleThree
             GetStudentInformation();
             GetTeacherInformation();
             GetUProgramInformation();
+            GetDegreeInformation();
 
             Console.WriteLine("Press any key to close the console");
             Console.ReadKey();
@@ -75,10 +76,28 @@ namespace ModuleThree
             Console.WriteLine("The program {0} in {1} department offers {2} degrees", name, department, degrees);
         }
 
-        //Degree Information
-        //string degreeName;
-        //int creditsRequired;
+        // Degree Information
+        static void GetDegreeInformation()
+        {
+            Console.WriteLine("Enter the degree's name: ");
+            string degreeName = Console.ReadLine();
+            Console.WriteLine("Enter the degree's credits required: ");
+            try
+            {
+                int creditsRequired = Convert.ToInt32(Console.ReadLine());
+                // print degree details
+                PrintDegreeDetails(degreeName, creditsRequired);
+            }
+            catch(FormatException e)
+            {
+                Console.WriteLine(e);
+            }
+        }
 
+        static void PrintDegreeDetails(string name, int creditsRequired)
+        {
+            Console.WriteLine("{0} requires {1} credits.", name, creditsRequired);
+        }
         //Course Information
         //string courseName;
         //int credits;
