@@ -7,8 +7,8 @@
     <ProjectGuid>{0EE14A03-91E4-4225-B6A1-7D35641973FA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DEV204x</RootNamespace>
-    <AssemblyName>DEV204x</AssemblyName>
+    <RootNamespace>ModuleOne</RootNamespace>
+    <AssemblyName>ModuleOne</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
