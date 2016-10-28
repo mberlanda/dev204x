@@ -66,7 +66,6 @@ namespace ModuleThree
             string departmentHead = Console.ReadLine();
             Console.WriteLine("Enter the uprogram's degrees: ");
             string degrees = Console.ReadLine();
-
             // print uprogram details
             PrintUProgramDetails(programName, departmentHead, degrees);
         }
@@ -81,27 +80,49 @@ namespace ModuleThree
         {
             Console.WriteLine("Enter the degree's name: ");
             string degreeName = Console.ReadLine();
+            Console.WriteLine("Enter the degree's category: ");
+            string degreeCategory = Console.ReadLine();
             Console.WriteLine("Enter the degree's credits required: ");
-            try
-            {
-                int creditsRequired = Convert.ToInt32(Console.ReadLine());
-                // print degree details
-                PrintDegreeDetails(degreeName, creditsRequired);
-            }
-            catch(FormatException e)
-            {
-                Console.WriteLine(e);
-            }
+            int creditsRequired = inputInteger();
+            // print degree details
+            PrintDegreeDetails(degreeName, degreeCategory, creditsRequired);
         }
 
-        static void PrintDegreeDetails(string name, int creditsRequired)
+        static void PrintDegreeDetails(string name, string category, int creditsRequired)
         {
-            Console.WriteLine("{0} requires {1} credits.", name, creditsRequired);
+            Console.WriteLine("{0} ({1}) requires {2} credits.", name, category, creditsRequired);
         }
+
         //Course Information
-        //string courseName;
-        //int credits;
-        //int durationInWeeks;
-        //string teacher;
+        static void GetCourseInformation()
+        {
+            Console.WriteLine("Enter the course's name: ");
+            string courseName = Console.ReadLine();
+            Console.WriteLine("Enter the course's duration in weeks: ");
+            int durationInWeeks = inputInteger();
+            Console.WriteLine("Enter the course's credits: ");
+            int credits = inputInteger();
+            // print course details
+            PrintCourseDetails(courseName, durationInWeeks, credits);
+        }
+
+        static void PrintCourseDetails(string name, int duration, int credits)
+        {
+            Console.WriteLine("Course: {0} Duration (weeks): {1} Credits: {2}", name, duration, credits);
+        }
+
+        static int inputInteger()
+        {
+            string value = Console.ReadLine();
+            try
+            {
+                return Convert.ToInt32(value);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("You must provide a numeric value!");
+                return inputInteger();
+            }
+        }
     }
 }
