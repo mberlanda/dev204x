@@ -10,9 +10,6 @@ namespace ModuleThree
     {
         static void Main(string[] args)
         {
-            // throw NotImplementedError
-            ValidateBirthday();
-
             GetStudentInformation();
             GetTeacherInformation();
             GetUProgramInformation();
@@ -32,12 +29,12 @@ namespace ModuleThree
             Console.WriteLine("Enter the student's last name");
             string lastName = Console.ReadLine();
             Console.WriteLine("Enter the student's birthday");
-            string birthday = Console.ReadLine();
+            DateTime birthday = inputDateTime();
             // print student details
             PrintStudentDetails(firstName, lastName, birthday);
         }
 
-        static void PrintStudentDetails(string first, string last, string birthday)
+        static void PrintStudentDetails(string first, string last, DateTime birthday)
         {
             Console.WriteLine("{0} {1} was born on: {2}", first, last, birthday);
         }
@@ -51,12 +48,12 @@ namespace ModuleThree
             Console.WriteLine("Enter the teacher's last name");
             string lastName = Console.ReadLine();
             Console.WriteLine("Enter the teacher's birthday");
-            string birthday = Console.ReadLine();
+            DateTime birthday = inputDateTime();
             // print teacher details
             PrintTeacherDetails(firstName, lastName, birthday);
         }
 
-        static void PrintTeacherDetails(string first, string last, string birthday)
+        static void PrintTeacherDetails(string first, string last, DateTime birthday)
         {
             Console.WriteLine("{0} {1} was born on: {2}", first, last, birthday);
         }
@@ -129,9 +126,18 @@ namespace ModuleThree
             }
         }
 
-        static void ValidateBirthday()
+        static DateTime inputDateTime()
         {
-            throw new NotImplementedException();
+            string value = Console.ReadLine();
+            try
+            {
+                return DateTime.Parse(value);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("You must provide a date in the format yyyy-mm-dd");
+                return inputDateTime();
+            }
         }
     }
 }
