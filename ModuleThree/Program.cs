@@ -10,10 +10,14 @@ namespace ModuleThree
     {
         static void Main(string[] args)
         {
+            // throw NotImplementedError
+            ValidateBirthday();
+
             GetStudentInformation();
             GetTeacherInformation();
             GetUProgramInformation();
             GetDegreeInformation();
+            GetCourseInformation();
 
             Console.WriteLine("Press any key to close the console");
             Console.ReadKey();
@@ -123,6 +127,11 @@ namespace ModuleThree
                 Console.WriteLine("You must provide a numeric value!");
                 return inputInteger();
             }
+        }
+
+        static void ValidateBirthday()
+        {
+            throw new NotImplementedException();
         }
     }
 }
