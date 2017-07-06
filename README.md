@@ -5,3 +5,4 @@ I am collecting in this repository some of the assignments from [Microsoft: DEV2
 - **ModuleOne:** Data Types, Variables, Operators, and Expressions
 - **ModuleTwo:** Decision Statments and Repetition
 - **ModuleThree:** Methods and Exceptions Handling
+- **ModuleFour:** Working with Arrays, Enums and Structures
