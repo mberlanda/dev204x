@@ -6,36 +6,36 @@ namespace ModuleFourUbuntu
     {
         internal struct Student
         {
-            public string firstName  { get; set; }
-            public string lastName  { get; set; }
-            public DateTime birthday { get; set; }
+            public string FirstName  { get; set; }
+            public string LastName  { get; set; }
+            public DateTime Birthday { get; set; }
         }
         internal struct Teacher
         {
-            public string firstName  { get; set; }
-            public string lastName  { get; set; }
-            public DateTime birthday  { get; set; }
+            public string FirstName  { get; set; }
+            public string LastName  { get; set; }
+            public DateTime Birthday  { get; set; }
         }
         internal struct Program
         {
-            public string name  { get; set; }
-            public string departmentHead  { get; set; }
+            public string Name  { get; set; }
+            public string DepartmentHead  { get; set; }
             public Degree[] Degrees  { get; set; }
 
 
         }
         internal struct Degree
         {
-            public string name  { get; set; }
-            public string category  { get; set; }
-            public int creditsRequired  { get; set; }
+            public string Name  { get; set; }
+            public string Category  { get; set; }
+            public int CreditsRequired  { get; set; }
         }
 
         internal struct Course
         {
-            public string name  { get; set; }
-            public int durationInWeeks  { get; set; }
-            public int credits  { get; set; }
+            public string Name  { get; set; }
+            public int DurationInWeeks  { get; set; }
+            public int Credits  { get; set; }
         }
     }
 }
