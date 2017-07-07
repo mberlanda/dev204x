@@ -22,7 +22,6 @@ namespace ModuleFourUbuntu
             public string DepartmentHead  { get; set; }
             public Degree[] Degrees  { get; set; }
 
-
         }
         internal struct Degree
         {

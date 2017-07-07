@@ -6,3 +6,4 @@ I am collecting in this repository some of the assignments from [Microsoft: DEV2
 - **ModuleTwo:** Decision Statments and Repetition
 - **ModuleThree:** Methods and Exceptions Handling
 - **ModuleFour:** Working with Arrays, Enums and Structures
+- **ModuleFive:**  Introducing Object-Oriented Programming in C#
