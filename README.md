@@ -8,3 +8,4 @@ I am collecting in this repository some of the assignments from [Microsoft: DEV2
 - **ModuleFour:** Working with Arrays, Enums and Structures
 - **ModuleFive:** Introducing Object-Oriented Programming in C#
 - **ModuleSix:** More OOP
+- **ModuleSeven:** Working with Collections
